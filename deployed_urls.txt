@@ -1,0 +1,36 @@
+1. To create mentor - https://mentor-student-db-puj5.onrender.com/mentors 
+    method -post
+    body - ex: {
+    "name": "Noah Martinez",
+    "mailId": "noah.martinez@example.com",
+    "phoneNo": 15557654321
+}
+
+2. To create Student - https://mentor-student-db-puj5.onrender.com/students
+    method -post
+    body - Ex: {
+    "name": "James Anderson",
+    "mailId": "james.anderson@example.com",
+    "phoneNo": 15555432109
+}
+
+3. To assign list of students to a mentor - https://mentor-student-db-puj5.onrender.com/mentors/:mentorid/assign-student
+    method -post
+    body - Ex: {
+    "students_id": [
+        "6759bf85-6454-4a6f-ac1b-47d3403897e9",
+        "9194860d-9cec-4ae1-80f0-4fabcdd4047ayt"
+    ]
+}
+
+4. To change mentor for particular student - https://mentor-student-db-puj5.onrender.com/students/change-mentor/:students_id
+    method - put 
+    body - ex: {
+    "mentor_id": "07d59442-fc44-4230-bbee-7349b2c7e937"
+}
+
+5. To get Students assigned for particular mentor - https://mentor-student-db-puj5.onrender.com/mentors/:mentorid/students-assigned
+    method - get
+
+6. To get previous assigned mentor for a student - https://mentor-student-db-puj5.onrender.com/students/:studentid/previous-mentor
+    method - get
